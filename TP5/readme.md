@@ -14,8 +14,7 @@ Plotly es una libreria grafica de Python que nos permite representar mediante gr
 
 Documentacion utilizada:
 1. https://doc.qt.io/qt.html
-2. https://www.mfitzp.com/courses/pyside/ 
-	-Getting started with PySide
+2. https://www.mfitzp.com/courses/pyside/ -Getting started with PySide
 3. https://plotly.com/python/
 
 ## Como ejecutar:
