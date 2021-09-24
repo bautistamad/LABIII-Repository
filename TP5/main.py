@@ -1,10 +1,13 @@
 from api import *
 from pyside import *
 
+
 def main():
     print("Main started")
     # covidAPI = API()
     # covidAPI.requestAPI()
+    
+  
 
     ventana = QApplication(sys.argv)
     app = PyMain()
