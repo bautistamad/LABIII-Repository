@@ -11,6 +11,7 @@ Libreria utilizada: _PySide2 & Qt_ and Plotly
 API Utilizada: https://documenter.getpostman.com/view/10808728/SzS8rjbc
 
 PySide6 es una libreria que trabaja en conjunto (cross-platform) con Qt, el cual es un **framework** de C++. Esta libreria nos da la posibilidad de crear nuestros entornos graficos facilmente.
+
 Plotly es una libreria grafica de Python que nos permite representar mediante graficos cualquier informacion.
 
 Documentacion utilizada:
