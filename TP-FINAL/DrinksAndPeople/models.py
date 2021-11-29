@@ -8,15 +8,38 @@ class Categoria(models.Model):
     nombre = models.CharField(max_length=100)
     descripcion = models.TextField(max_length=400)
 
+    class Meta:
+        verbose_name = 'Categoria'
+        verbose_name_plural = 'Categorias'
+
+    def __str__(self):
+        return self.nombre
+
 class Ingrediente(models.Model):
     nombre = models.CharField(max_length=100)
-    id_IngredientCocktailDB = models.IntegerField()
+    IngredientCocktailID = models.IntegerField(null=False,blank=True)
+
+    class Meta:
+        verbose_name = 'Ingrediente'
+        verbose_name_plural = 'Ingredientes'
+
+    def __str__(self):
+        return self.nombre
 
 class Bebida(models.Model):
     nombre = models.CharField(max_length=100)
-    id_BebidaCocktailDB = models.IntegerField()
+    BebidaCocktailID = models.IntegerField()
     categoria = models.ForeignKey(Categoria,null=False,on_delete=models.CASCADE)
     ingredientes = models.ManyToManyField(Ingrediente,
-                                            verbose_name=Ingrediente,
-                                            default=None)
-    imagen = models.ImageField(upload_to='media/')
+                                            verbose_name='Ingredientes',
+                                            default=None,
+                                            blank=True,
+                                            related_name='mis_ingredientes')
+    imagen = models.ImageField(upload_to='bebidasImagenes/')
+    
+    class Meta:
+        verbose_name = 'Bebida'
+        verbose_name_plural = 'Bebidas'
+
+    def __str__(self):
+        return self.nombre
